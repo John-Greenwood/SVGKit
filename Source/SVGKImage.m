@@ -253,7 +253,7 @@ static NSMutableDictionary* globalSVGKImageCache;
     }
 }
 
-+ (SVGKImage*) imageWithData:(NSData *)newNSData
++ (nullable SVGKImage*) imageWithData:(NSData *)newNSData
 {
 	NSParameterAssert(newNSData != nil);
 	@synchronized(self) {
