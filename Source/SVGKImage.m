@@ -349,7 +349,7 @@ static NSMutableDictionary* globalSVGKImageCache;
 	return [self initWithSource:[SVGKSourceURL sourceFromURL:url]];
 }
 
-- (id)initWithData:(NSData *)data
+- (nullable id)initWithData:(NSData *)data
 {
 	NSParameterAssert(data != nil);
 	
