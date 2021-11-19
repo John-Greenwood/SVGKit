@@ -253,7 +253,7 @@ static NSMutableDictionary* globalSVGKImageCache;
     }
 }
 
-+ (nullable SVGKImage*) imageWithData:(NSData *)newNSData
++ (nullable SVGKImage*) imageWithData:(nonnull NSData *)newNSData
 {
 	NSParameterAssert(newNSData != nil);
 	@synchronized(self) {
@@ -349,7 +349,7 @@ static NSMutableDictionary* globalSVGKImageCache;
 	return [self initWithSource:[SVGKSourceURL sourceFromURL:url]];
 }
 
-- (nullable id)initWithData:(NSData *)data
+- (nullable id)initWithData:(nonnull NSData *)data
 {
 	NSParameterAssert(data != nil);
 	

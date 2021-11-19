@@ -117,7 +117,7 @@ typedef void (^SVGKImageAsynchronousLoadingDelegate)(SVGKImage* loadedImage, SVG
  This is because SVG's cannot parse correctly without the metadata about where
  the file came from: e.g. they cannot process relative links, cross-references, etc.
  */
-+(SVGKImage*) imageWithData:(NSData *)newNSData; // if you have custom source's you want to use
++(nullable SVGKImage*) imageWithData:(NSData *)newNSData; // if you have custom source's you want to use
 + (SVGKParser*) imageParserWithDataAsynchronously:(NSData *)newNSData onCompletion:(SVGKImageAsynchronousLoadingDelegate)blockCompleted;
 + (SVGKImage*) imageWithDataAsynchronously:(NSData *)newNSData onCompletion:(SVGKImageAsynchronousLoadingDelegate)blockCompleted;
 
@@ -140,7 +140,7 @@ typedef void (^SVGKImageAsynchronousLoadingDelegate)(SVGKImage* loadedImage, SVG
 +(SVGKParser *) imageWithSource:(SVGKSource *)source onCompletion:(SVGKImageAsynchronousLoadingDelegate)blockCompleted;
 
 - (id)initWithContentsOfFile:(NSString *)path;
-- (id)initWithData:(NSData *)data;
+- (nullable id)initWithData:(NSData *)data;
 
 #pragma mark - UIImage methods cloned and re-implemented as SVG intelligent methods
 
